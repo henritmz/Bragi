@@ -1,4 +1,4 @@
-### Backend
+## Backend
 
 #### Domínio - Modelagem de Dados
 
@@ -24,12 +24,12 @@
 - **Requisitos Técnicos:** Implementação aplicando as boas práticas de programação, uso de ORM, Framework de persistência, integridade do banco de dados. 
 
 
-##### Frontend
+## Frontend
 
 1. Disponibilizar uma pagina para preenchimento dos dados de contato interessados na realização de um curso.
 2. Utilizar algum framework de stilo e validação de regras de preenchimento.
 
-### Design
+##### Design
 
 Link: [Figma](https://www.figma.com/file/xw8m669CARCkepC7NHQtdI/Eduka-Tech-projeto-Hera?node-id=0%3A1)
 
