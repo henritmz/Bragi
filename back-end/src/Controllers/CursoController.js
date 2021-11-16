@@ -10,20 +10,13 @@ const categorias = [
 module.exports = {
 	async read(req, res) {
 		const curso = await Curso.find();
-
-		if (curso === []) res.json({ message: "Não há cursos registrados." })
-		else res.status(200).json(curso)
+		curso == [] ? (res.json({ message: "Não há cursos registrados." })):(res.status(200).json(curso))
 	},
 
-	async readyOne(req, res) {
-
-		let curso_id = await Curso.findById(req.params.id)
-
-		if (curso_id == null) {
-			return res.status(404).json("Curso não encontrado")
-		}
-
-		return res.status(200).json(curso_id)
+	async readOne(req, res) {
+		const curso_id = await Curso.findById(req.params.id)
+		
+		curso_id == null ? (res.status(404).json("Curso não encontrado")): (res.status(200).json(curso_id))
 	},
 
 	async create(req, res) {
@@ -54,7 +47,7 @@ module.exports = {
 
 	async delete(req, res) {
 		console.log(req.params.id)
-		let curso_id = await Curso.findById(req.params.id)
+		const curso_id = await Curso.findById(req.params.id)
 
 		if (curso_id == null) {
 			return res.status(401).json("Curso inexistente")
@@ -71,7 +64,7 @@ module.exports = {
 	},
 
 	async update(req, res) {
-		let curso_id = await Curso.findById(req.params.id)
+		const curso_id = await Curso.findById(req.params.id)
 
 		if (curso_id == null) {
 			return res.status(400).json("Curso inexistente")
